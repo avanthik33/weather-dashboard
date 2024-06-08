@@ -5,7 +5,7 @@ const Search = () => {
 
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
-  const [inputCity,setInputCity]=useState("")
+  const [inputCity, setInputCity] = useState("");
 
   const inputStyle = {
     width: "100%",
