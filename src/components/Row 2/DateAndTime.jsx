@@ -36,6 +36,7 @@ const cardStyle = {
   backdropFilter: "blur(5px)",
   borderRadius: "20px",
   padding: "40px",
+  marginTop: "60px",
   textAlign: "center",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.9), 0 6px 20px rgba(0, 0, 0, 0.6)", // Improved box shadow
   maxWidth: "600px",
