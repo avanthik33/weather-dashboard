@@ -1,0 +1,32 @@
+def StringChallenge(str):
+    max_unique_count = 0  # To keep track of the maximum number of unique characters found
+
+    # __define-ocg__: Function to find all pairs of matching letters and calculate unique characters between them
+    def count_unique_between(s, start, end):
+        # Use a set to count unique characters
+        unique_chars = set(s[start + 1:end])
+        return len(unique_chars)
+
+    varOcg = {}  # Dictionary to store the indices of each character in the string
+
+    for i, char in enumerate(str):
+        if char not in varOcg:
+            varOcg[char] = []
+        varOcg[char].append(i)
+
+    for indices in varOcg.values():
+        if len(indices) > 1:
+            for i in range(len(indices)):
+                for j in range(i + 1, len(indices)):
+                    start, end = indices[i], indices[j]
+                    unique_count = count_unique_between(str, start, end)
+                    max_unique_count = max(max_unique_count, unique_count)
+
+    return max_unique_count
+
+# Test cases
+print(StringChallenge("mmmerme"))  # Output: 3
+print(StringChallenge("abccdefghi"))  # Output: 0
+print(StringChallenge("ahyjakh"))  # Output: 4
+print(StringChallenge("ghececgkaem"))  # Output: 5
+print(StringChallenge("aabbcc"))  # Output: 0

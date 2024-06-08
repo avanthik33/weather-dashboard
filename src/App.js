@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import DashBoard from "./pages/DashBoard";
 
 function App() {
   return (
     <>
-    
+      <DashBoard />
     </>
   );
 }
